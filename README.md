@@ -2,7 +2,7 @@
 A bolt project that configures MacOS machines with some packages via Homebrew. This is the initial version and it will go through further modifications as necessary.
 
 # Setup
-## Install VirtualBox and Vagrant
+## Install VirtualBox, Vagrant and Bolt on your Laptop
 ### Virtualbox Install
 * Install the latest virtualbox (v6.x) from https://www.virtualbox.org/
 * Install the _VirtualBox 6.1.16 Oracle VM VirtualBox Extension Pack_ too. You might get prompted for it after the VirtualBox v6.x install. If not, download the Extension Pack and install it. Go to *File* -> *Preferences* -> *Extensions* Category.
@@ -39,7 +39,9 @@ In the _inventory.yaml_ file, you will see 2 VMs/nodes being listed there. Those
 Run the bolt command to execute the install script on both VMs:
 * `bolt script run scripts/setup_mac_sw.sh -t nodes`
 
-The _nodes_ target is a Bolt-Inventory node group that is found in the _inventory.yaml_ file. This command will take 10 mins to run. 
+The _nodes_ target is a Bolt-Inventory node group that is found in the _inventory.yaml_ file. 
+
+This command will take 10 mins to run and you will not see any scrolling output. Just wait. You will see the entire output at the end.
 
 After the command has finished, run the following command to check:
 
