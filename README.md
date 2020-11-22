@@ -11,8 +11,8 @@ A bolt project that configures MacOS machines with some packages via Homebrew. T
 Install Vagrant from https://www.vagrantup.com/downloads
 
 ## Clone this Repository
-* git clone https://github.com/rajeshr264/macos-configuration-bolt.git 
-* cd macos-configuration-bolt
+* `git clone https://github.com/rajeshr264/macos-configuration-bolt.git` 
+* `cd macos-configuration-bolt`
 
 ## Create 2 MacOSX Catalina VMs
 The _Vagrantfile_ in the repository creates a Master MacOSX-Catalina VM and then 2 _linked clones_. In Virtualbox, you will see 3 VMs, namely the Master VM and the 2 cloned VMs, called _mac1_ and _mac2_. The master VM will be _powered off_ mode. We will be working with the _mac1_ and _mac2_ VMs only.
