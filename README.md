@@ -19,7 +19,7 @@ The _Vagrantfile_ in the repository creates a Base MacOSX-Catalina VM and then 2
 
 ### Start the 2 VMs
 
-It will take a good *15-20 minutes* to download the MacOS X Catalinea Base Vagrant box and then launch the 3 VMs. Go get a coffee. 
+It will take a good *15-20 minutes* to download the MacOS X Catalina Base Vagrant box and then launch the 3 VMs. Go get a coffee. 
 
 To launch the downloading of the MacOSX Catalina Base Box & creation of the VMs, type:
 * `vagrant up --provider virtualbox`
