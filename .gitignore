@@ -1,1 +1,3 @@
 .vagrant
+.rerun.json
+bolt-debug.log
