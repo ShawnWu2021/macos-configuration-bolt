@@ -33,13 +33,13 @@ You can log into the 2 VMs that are running using the following ways:
 * `ssh vagrant@mac1 or ssh vagrant@mac2` -> password: "vagrant"
 * `cd macos-configuration-bolt` then `vagrant ssh mac1` or `vagrant ssh mac2`. vagrant will get the password specified in the _Vagrantfile_  
 
-### Run a sample configuration script with Bolt
+### Configure the 2 VMs using Bolt
 In the _inventory.yaml_ file, you will see 2 VMs/nodes being listed there. Those 2 Private IPs are created and assigned in the _Vagrantfile_. 
 
-Run the bolt command to execute the install script on both VMs:
+Run the bolt command to configure the 2 VMs using a _sample_ script:
 * `bolt script run scripts/setup_mac_sw.sh -t nodes`
 
-The _nodes_ target is a Bolt-Inventory node group that is found in the _inventory.yaml_ file. 
+The `nodes` target in the above bolt command, is defined in the _inventory.yaml_ file. 
 
 This command will take 10 mins to run and you will not see any scrolling output. Just wait. You will see the entire output at the end.
 
