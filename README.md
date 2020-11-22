@@ -10,6 +10,9 @@ A bolt project that configures MacOS machines with some packages via Homebrew. T
 ### Vagrant Install 
 Install Vagrant from https://www.vagrantup.com/downloads
 
+### Install Puppet Bolt
+Install Bolt from https://puppet.com/docs/bolt/latest/bolt_installing.html 
+
 ## Clone this Repository
 * `git clone https://github.com/rajeshr264/macos-configuration-bolt.git` 
 * `cd macos-configuration-bolt`
