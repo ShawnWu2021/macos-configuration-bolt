@@ -1,7 +1,7 @@
 groups:
-- name: nodes
+- name: nodes  # the uri's below are defined in the Vagrantfile as Private IPs
   targets:
-    - uri: 192.168.56.2
+    - uri: 192.168.56.2  
       alias: mac1
     - uri: 192.168.56.3
       alias: mac2
