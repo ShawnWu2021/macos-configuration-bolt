@@ -28,7 +28,7 @@ To test if the VMs are up, open "VirtualBox" console from your Desktop. You will
 
 You can log into the VMs using the following ways:
 * `ssh vagrant@mac1 or ssh vagrant@mac2` -> password:vagrant
-* `vagrant ssh mac1` or `vagrant ssh mac2`, vagrant will take the password specified in the _Vagrantfile_  
+* `cd macos-configuration-bolt`then `vagrant ssh mac1` or `vagrant ssh mac2`. vagrant will get the password specified in the _Vagrantfile_  
 
 ### Run a sample configuration script with Bolt
 In the _inventory.yaml_ file, you will see 2 VMs/nodes being listed there. Those Private IPs are created and assigned in the _Vagrantfile_. 
