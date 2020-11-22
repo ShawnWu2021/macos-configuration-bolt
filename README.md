@@ -40,7 +40,7 @@ This command will take 15-20 mins to run. After the command has finished, run th
 
 * `bolt command run 'java -version' -t nodes` to see if java 1.8 has been installed on both nodes.
 
-## Cleanup
+# Cleanup
 * `cd macos-configuration-bolt`
 * `vagrant destroy -f`
 
