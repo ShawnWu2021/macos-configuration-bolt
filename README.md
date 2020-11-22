@@ -15,7 +15,7 @@ Install Vagrant from https://www.vagrantup.com/downloads
 * `cd macos-configuration-bolt`
 
 ## Create 2 MacOSX Catalina VMs
-The _Vagrantfile_ in the repository creates a Master MacOSX-Catalina VM and then 2 _linked clones_. In Virtualbox, you will see 3 VMs, namely the Master VM and the 2 cloned VMs, called _mac1_ and _mac2_. The master VM will be _powered off_ mode. We will be working with the _mac1_ and _mac2_ VMs only.
+The _Vagrantfile_ in the repository creates a Base MacOSX-Catalina VM and then 2 _linked clones_. In Virtualbox, you will see 3 VMs, namely the Base VM and the 2 cloned VMs, called _mac1_ and _mac2_. The Base VM will be _powered off_ mode. We will be working with the _mac1_ and _mac2_ VMs only.
 
 ### Start the 2 VMs
 
@@ -24,7 +24,7 @@ It will take a good *15-20 minutes* to download the MacOS X Catalinea Base Vagra
 To launch the downloading of the MacOSX Catalina Base Box & creation of the VMs, type:
 * `vagrant up --provider virtualbox`
 
-To test if the VMs are up, open "VirtualBox" console from your Desktop. You will see the Master VM powered off and then 2 VMs running.
+To test if the VMs are up, open "VirtualBox" console from your Desktop. You will see the Base VM powered off and then 2 VMs running.
 
 You can log into the VMs using the following ways:
 * `ssh vagrant@mac1 or ssh vagrant@mac2` -> password:vagrant
@@ -40,8 +40,11 @@ This command will take 15-20 mins to run. After the command has finished, run th
 
 * `bolt command run 'java -version' -t nodes` to see if java 1.8 has been installed on both nodes.
 
+## Cleanup
+* `cd macos-configuration-bolt`
+* `vagrant destroy -f`
 
-
+The Base VM will _not_ be deleted by the `vagrant destroy` command. I would recommend you leave it as a stopped VM. If/when you are done all your Mac related testing, you can delete the Base VM from Virtualbox UI.
 
 
 
