@@ -16,9 +16,9 @@ Vagrant.configure("2") do |config|
   config.vm.define "mac1" do |m|
     m.vm.box_check_update = false
     m.vm.box = "GAEV/MacOS_Catalina"
-    m.vm.define "m1"
+    m.vm.define "mac1"
     # name of the virtual machine instance
-    m.vm.hostname = "m1.host.com"
+    m.vm.hostname = "mac1.host.com"
     # assign a static IP
     m.vm.network "private_network", ip: "192.168.56.2"
   end
@@ -27,9 +27,9 @@ Vagrant.configure("2") do |config|
   config.vm.define "mac2" do |m|
     m.vm.box_check_update = false
     m.vm.box = "GAEV/MacOS_Catalina"
-    m.vm.define "m2"
+    m.vm.define "mac2"
     # name of the virtual machine instance
-    m.vm.hostname = "m2.host.com"
+    m.vm.hostname = "mac2.host.com"
     # assign a static IP
     m.vm.network "private_network", ip: "192.168.56.3"
   end
