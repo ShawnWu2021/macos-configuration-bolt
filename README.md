@@ -18,28 +18,30 @@ Install Bolt from https://puppet.com/docs/bolt/latest/bolt_installing.html
 * `cd macos-configuration-bolt`
 
 ## Create 2 MacOSX Catalina VMs
-The _Vagrantfile_ in the repository creates a Base MacOSX-Catalina VM and then 2 _linked clones_. In Virtualbox, you will see 3 VMs, namely the Base VM and the 2 cloned VMs, called _mac1_ and _mac2_. The Base VM will be _powered off_ mode. We will be working with the _mac1_ and _mac2_ VMs only.
+The _Vagrantfile_ in the repository creates a Base MacOSX-Catalina VM and then 2 _linked clones_. In Virtualbox, you will see 3 VMs, namely the Base-VM and the 2 cloned VMs, called _mac1_ and _mac2_. The Base VM will be _powered off_ mode. We will be working with the _mac1_ and _mac2_ VMs only.
 
 ### Start the 2 VMs
-
-It will take a good *15-20 minutes* to download the MacOS X Catalina Base Vagrant box and then launch the 3 VMs. Go get a coffee. 
 
 To launch the downloading of the MacOSX Catalina Base Box & creation of the VMs, type:
 * `vagrant up --provider virtualbox`
 
-To test if the VMs are up, open "VirtualBox" console from your Desktop. You will see the Base VM powered off and then 2 VMs running.
+When you run the above command for the _first_ time, it will take a good *15-20 minutes* to download the MacOS X Catalina Base-Vagrant-box and then launch the 3 VMs. Go get a coffee. From then on, future `vagrant up` commands will launch the 2 VMs much faster.
 
-You can log into the VMs using the following ways:
-* `ssh vagrant@mac1 or ssh vagrant@mac2` -> password:vagrant
-* `cd macos-configuration-bolt`then `vagrant ssh mac1` or `vagrant ssh mac2`. vagrant will get the password specified in the _Vagrantfile_  
+To test if the VMs are up, open _VirtualBox_ GUI from your Desktop. You will see the Base-VM powered off and then 2 VMs running.
+
+You can log into the 2 VMs that are running using the following ways:
+* `ssh vagrant@mac1 or ssh vagrant@mac2` -> password: "vagrant"
+* `cd macos-configuration-bolt` then `vagrant ssh mac1` or `vagrant ssh mac2`. vagrant will get the password specified in the _Vagrantfile_  
 
 ### Run a sample configuration script with Bolt
-In the _inventory.yaml_ file, you will see 2 VMs/nodes being listed there. Those Private IPs are created and assigned in the _Vagrantfile_. 
+In the _inventory.yaml_ file, you will see 2 VMs/nodes being listed there. Those 2 Private IPs are created and assigned in the _Vagrantfile_. 
 
 Run the bolt command to execute the install script on both VMs:
 * `bolt script run scripts/setup_mac_sw.sh -t nodes`
 
-This command will take 15-20 mins to run. After the command has finished, run the following commands to check:
+The _nodes_ target is a Bolt-Inventory node group that is found in the _inventory.yaml_ file. This command will take 10 mins to run. 
+
+After the command has finished, run the following command to check:
 
 * `bolt command run 'java -version' -t nodes` to see if java 1.8 has been installed on both nodes.
 
@@ -47,7 +49,7 @@ This command will take 15-20 mins to run. After the command has finished, run th
 * `cd macos-configuration-bolt`
 * `vagrant destroy -f`
 
-The Base VM will _not_ be deleted by the `vagrant destroy` command. I would recommend you leave it as a stopped VM. If/when you are done all your Mac related testing, you can delete the Base VM from Virtualbox UI.
+The Base-VM will _not_ be deleted by the `vagrant destroy` command. I would recommend you leave it as a stopped VM. If/when you are done all your Mac related testing, you can delete the Base VM from Virtualbox UI.
 
 
 
