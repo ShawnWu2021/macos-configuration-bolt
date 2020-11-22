@@ -27,8 +27,8 @@ To launch the downloading of the MacOSX Catalina Base Box & creation of the VMs,
 To test if the VMs are up, open "VirtualBox" console from your Desktop. You will see the Master VM powered off and then 2 VMs running.
 
 You can log into the VMs using the following ways:
-* `ssh vagrant@m1 or ssh vagrant@m2` -> password:vagrant
-* `vagrant ssh m1` or `vagrant ssh m2`, vagrant will take the password specified in the _Vagrantfile_  
+* `ssh vagrant@mac1 or ssh vagrant@mac2` -> password:vagrant
+* `vagrant ssh mac1` or `vagrant ssh mac2`, vagrant will take the password specified in the _Vagrantfile_  
 
 ### Run a sample configuration script with Bolt
 In the _inventory.yaml_ file, you will see 2 VMs/nodes being listed there. Those Private IPs are created and assigned in the _Vagrantfile_. 
