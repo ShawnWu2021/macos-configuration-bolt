@@ -4,7 +4,7 @@ A bolt project that configures MacOS machines with some packages via Homebrew. T
 # Setup
 ## Install VirtualBox, Vagrant and Bolt on your Laptop
 ### Virtualbox Install
-* Install the latest virtualbox (v6.x) from https://www.virtualbox.org/
+* Install the latest virtualbox (v6.x) from https://www.virtualbox.org/wiki/Downloads
 * Install the _VirtualBox 6.1.16 Oracle VM VirtualBox Extension Pack_ too. You might get prompted for it after the VirtualBox v6.x install. If not, download the Extension Pack and install it. Go to *File* -> *Preferences* -> *Extensions* Category.
 
 ### Vagrant Install 
